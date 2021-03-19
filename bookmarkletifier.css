@@ -1,5 +1,6 @@
 html { height: 100%; }
-body { margin: 0; height: 100%; }
+body { margin: 0; height: 100%; font-family: sans-serif;}
+label {font-size:0.6em}
 
 #editors {
     position: absolute;

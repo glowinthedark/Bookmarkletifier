@@ -147,6 +147,11 @@ $(function () {
     $('#format').on('click', function () {
         editor.getSession().setValue(unbookmarkify(editor.getSession().getValue()));
     });
+
+    $('#theme').on('change', function () {
+        debugger;
+        editor.setTheme(this.value);
+    });
     
     editor.getSession().on('change', updateBookmarkified);
     $('#bookmarkified').delayedKeyUp(100, updateNice).bind('drop', updateNice);
