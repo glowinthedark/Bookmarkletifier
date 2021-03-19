@@ -79,7 +79,7 @@ $(function () {
     });
 
     var editor = ace.edit('nice');
-    editor.setTheme("ace/theme/chrome");
+    editor.setTheme("ace/theme/gruvbox");
     editor.getSession().setMode("ace/mode/javascript");
 
     bookmarkletClickHandler = function (event) {
