@@ -149,8 +149,10 @@ $(function () {
     });
 
     $('#theme').on('change', function () {
-        debugger;
         editor.setTheme(this.value);
+    });
+    $('#escape').on('click', function () {
+        editor.getSession().setValue(escape(editor.getSession().getValue()));
     });
     
     editor.getSession().on('change', updateBookmarkified);
