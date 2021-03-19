@@ -103,7 +103,7 @@ $(function () {
     };
 
     function bookmarkify(source) {
-      return 'javascript:'+escape(jsmin(source).replace(/^\s+|\s+$/, ''));
+      return 'javascript:'+ jsmin(source).replace(/^\s+|\s+$/, '');
     }
     function unbookmarkify(source) {
       return js_beautify(unescape(source.replace(/^javascript:/, '')));
@@ -142,6 +142,10 @@ $(function () {
         });
         $('#save').attr('disabled', true);
         return false;
+    });
+
+    $('#format').on('click', function () {
+        editor.getSession().setValue(unbookmarkify(editor.getSession().getValue()));
     });
     
     editor.getSession().on('change', updateBookmarkified);
